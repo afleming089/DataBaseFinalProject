@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDoa {
-    private static final String INSERT_QUERY = "insert into student values(?,?,?,?,?,?)";
+    private static final String INSERT_QUERY = "insert into student(name, email, course, country) values(?,?,?,?)";
     private static final String GET_ALL_QUERY = "select id, name, email, course, country from student;";
     private static final String GET_STUDENT_BY_ID = "select id, name, email, course, country from student where id = ?";
     private static String UPDATE_STUDENT = "update student set name=?, email=?, course=?, country=? where id=?";

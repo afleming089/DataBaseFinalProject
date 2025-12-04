@@ -15,7 +15,7 @@ public class Student {
         this.country = country;
     }
 
-    public Student( String name, String email, String course, String country) {
+    public Student(String name, String email, String course, String country) {
         this.name = name;
         this.email = email;
         this.course = course;

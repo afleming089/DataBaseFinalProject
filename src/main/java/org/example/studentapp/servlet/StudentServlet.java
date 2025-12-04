@@ -53,7 +53,7 @@ public class StudentServlet extends HttpServlet {
                     listStudents(req, resp);
                     break;
                 case "NEW":
-                    showEditForm(req, resp);
+                    showNewForm(req, resp);
                     break;
                 case "EDIT":
                     showEditForm(req, resp);
@@ -130,9 +130,9 @@ public class StudentServlet extends HttpServlet {
     private void insertStudent(HttpServletRequest req, HttpServletResponse resp) throws Exception {
         String name = req.getParameter("name");
         String email = req.getParameter("email");
-        String password = req.getParameter("password");
+        String course = req.getParameter("course");
         String country = req.getParameter("country");
-        Student student = new Student(name, email, password, country);
+        Student student = new Student(name, email, course, country);
         studentDoa.insertStudent(student);
         resp.sendRedirect("students?action=LIST");
         // RequestDispatcher rd = req.getRequestDispatcher("students-list.jsp");
